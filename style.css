@@ -1,0 +1,569 @@
+@font-face {
+    font-family: "SFPro";
+    src: url(font/SFProLight.otf);
+}
+* {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+body {
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*Scroll Bar*/
+/* width */
+::-webkit-scrollbar {
+    width: 0.3rem;
+  }
+
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(255,158,0,1) 71%, rgba(202,131,255,1) 100%);
+    border-radius: 10px;
+  }
+  
+
+  /*Loading*/
+
+
+  .spinContainer {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(55, 15, 20);
+    display: grid;
+    place-items: center;
+    z-index: 10;
+}
+
+.square {
+    width: 20em;
+    height: 30em;
+    transform: rotateY(0deg);
+    animation: rotateAnimation 2.5s linear infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-shrinK: 0;
+}
+
+
+.spin {
+    height: 100%;
+}
+
+@keyframes rotateAnimation {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(360deg);}
+}
+
+  /*main container*/
+.bigContainer {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    overflow:scroll;
+    scroll-snap-type: y mandatory;
+    overflow-x: hidden;
+    opacity: 1;
+    display: flex;
+    transition: opacity 0.5s ease-in;
+}
+
+/*iPhone Screen */
+.container1 {
+    background:no-repeat center / cover url(images/stackedPeak.svg);
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.subcontainer1 {
+    background-color: rgb(6, 1, 43);
+    max-width: 761px;
+    min-width: 323px;
+    width: 95%;
+    height: 95%;
+    border-radius: 3.75em;
+    display: flex;
+    overflow: auto;
+    scroll-snap-align: center;
+}
+
+#sideButton {
+    width: 0.3%; 
+    background-color: rgba(195, 186, 234, 0);
+    height: 25%; 
+    position: relative; 
+    top: -25%;
+}
+
+#notifButton {
+    width: 100%; 
+    height: 10%; 
+    background-color: rgb(255, 255, 255); 
+    margin-bottom: 2.5em;
+    border-radius: 1em 0 0 1em ;
+}
+
+#volumeButton {
+    width: 100%; 
+    height: 40%; 
+    background-color: rgb(255, 255, 255); 
+    margin-bottom: 1em;
+    border-radius: 1em 0 0 1em ;
+}
+#sideButton2 {
+    width: 0.3%; 
+    background-color: rgb(195, 186, 234);
+    height: 10%; 
+    position: relative; 
+    top: -25%;
+    border-radius: 0 1em 1em 0;
+}
+
+.screen1 {
+    background: no-repeat center / cover url(images/screenWallpaper.svg);
+    max-width: 751px;
+    min-width: 303px;
+    width: 94%;
+    height: 96%;
+    border-radius: 3em;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    scroll-snap-type: x mandatory;
+}
+
+.screen1::-webkit-scrollbar{ height: 0px;}
+
+/* This is where the content for the phone should be! */
+.screen2 {
+    background-color: rgba(163, 59, 59, 0);
+    max-width: 751px;
+    min-width: 303px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+}
+
+
+#button1 {
+    width: 35%;
+    height: 5%;
+    border-radius: 0em 0em  2em 2em;
+    background-color: rgb(33, 24, 80);
+    border: 0px;
+    box-shadow: 5px 5px 5px 5px white;
+}
+
+#divCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.clock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+  #time {
+    color: white;
+    font-family: "SFPro";
+    font-size: 10vh;
+    font-weight: light;
+    letter-spacing: -2px;
+    pointer-events: none;
+  }
+
+  #day {
+    color: white;
+    font-family: "SFPro";
+    font-size: 2.5vh;
+    font-weight: light;
+    pointer-events: none;
+    position: relative;
+    top: -30%;
+  }
+
+  .notch {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: white;
+    font-size: 2.5vh;
+    font-weight: bold;
+  }
+
+  .iOSBarRight {
+    width: 80%; 
+    height: 100%; 
+    display: flex; 
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 2em;
+    column-gap: 0.25em;
+  }
+
+  .iOSBar2 {
+    width: 50%; 
+    height: 100%; 
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5px;
+    column-gap: 0.25em;
+  }
+
+  .greeting {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 3em;
+    font-size: 4vh;
+    color: white;
+    text-align: center;
+    text-shadow: 3px 3px rgb(170, 0, 0);
+  }
+
+  .swipe {
+    background-color: rgba(0, 0, 255, 0);
+    border: 0;
+    color: white;
+    font-size: 3vh;
+  }
+
+  .keyArrow {
+    background-color: white;
+    color: black;
+    padding: 0.1em 0.2em 0.2em 0.2em;
+    border-radius: 0.25em;
+    font-size: 4vh;
+  }
+
+  .keyArrow:hover {
+    background-color: rgb(0, 176, 100);
+    color: rgb(255, 255, 255);
+    padding: 0.1em 0.2em 0.2em 0.2em;
+  }
+/*Spinning Clock*/
+
+
+  .aboutMe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-end;
+    align-items: center;
+    font-size: 2.8vh;
+    color: white;
+  }
+
+  .aboutMeText {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+  }
+  .aboutMe p {
+    text-align: center;
+  }
+
+  .navArrows {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+    margin-top: 1em;
+  }
+
+  .keyArrow2 {
+    background-color: rgba(100, 100, 100, 0.576);
+    color: white;
+    width: 1em;
+    height: 1em;
+    padding: 0.75em;
+    border-radius: 50%;;
+    font-size: 3vh;
+    transition: ease-in 0.3s ;
+    backdrop-filter: blur(15px);  
+}
+
+  .keyArrow2:hover {
+    transform: scale(1.1);
+    background-color: rgb(59, 59, 59);
+    color: white;
+  }
+/*iPhone Screen */
+
+
+
+
+
+
+/*Gameboy Screen */
+
+.container2 {
+    background:no-repeat center / cover url(images/stackedPeak.svg);
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+	align-items: center;
+	justify-content: center;
+    scroll-snap-align: center;
+    flex-shrink: 0;
+
+}
+
+.subContainer2 {
+    max-width: 740px;
+    min-width: 370px;
+    width: 70%; 
+    height: 90%; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items:center;
+}
+
+.gameboyScreen {
+    background-color: rgb(170, 38, 5);
+    width: 90%;
+    height: 60%;
+    border-radius: 2em;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+}
+
+.circles {
+    width: 90%;
+    height: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 15px;
+
+}
+.circle {
+    width: 1em;
+    height: 1em;
+    background-color: rgb(53, 0, 0);
+    border-radius: 50%;
+}
+
+.circleSmall {
+    width: 10px;
+    height: 10px;
+    background-color:  rgb(53, 0, 0);
+    border-radius: 50%;
+}
+
+.gbaScreen {
+    background-color: rgb(0, 0, 0);
+    width: 85%;
+    height:90%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+}
+
+.gbaScreenMain {
+    padding: 0.2em;
+    margin: 0.75em;
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+}
+
+.gbaScreenMainText {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: white;
+    font-weight: 700;
+    font-size: 12em;
+}
+
+.gameboyPad {
+    background-color: rgb(170, 38, 5);
+    width: 90%;
+    height: 60%;
+    border-radius:  2em;
+    border: 3px solid black;
+    margin: 0;
+    padding: 0;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.hinge {
+    background-color: rgb(170, 38, 5);
+    width: 100%;
+    height: 10%;
+    border-radius: 2em 2em 2em 2em;
+    border: 4px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hingeLine {
+    background-color: rgb(170, 38, 5);
+    width: 45%;
+    height: 100%;
+    border: 2px solid black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hingeLine2 { 
+    background-color: rgb(170, 38, 5);
+    width: 10%;
+    height: 100%;
+    border: 2px solid black;
+}
+
+.lightBtn {
+    margin-top: 1em;
+    height: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sunBtn {
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border-radius: 50%;
+}
+.lightBar {
+    height: 20px;
+    width: 20px;
+    background: rgb(220, 220, 220);
+    border-radius: 50%;
+    border: 1px solid rgb(84, 14, 14);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.statusLight {
+    margin-top: 1em;
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.greenLight {
+    height: 50%;
+    width: 2.75%;
+    background-color: rgb(98, 226, 157);
+    margin-bottom: 10px;
+    animation: blinking 0.5s infinite;
+}
+
+.greyLight {
+    height: 50%;
+    width: 2.75%;
+    background-color: rgb(91, 74, 74);
+}
+
+@keyframes blinking {
+    0% {
+      background-color: #3be16d;
+    }
+    100% {
+      background-color: #00734b;
+    }
+  }
+
+  .gameboyPadCircles {
+    height: 45%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .bigPadCircle,   .smallPadCircle {
+    height: 100%;
+    width: 50%;
+    outline: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  .bigPadCircle2 {
+    height: 85%;
+    width: 60%;
+    background-color: rgb(136, 27, 0);
+    border-radius: 50%;
+    border: 0.5em solid rgb(100, 20, 0);
+  }
+
+  .smallPadCircle2 {
+    height: 100%;
+    width: 30%;
+    border-radius: 4em;
+    background-color: rgb(136, 27, 0);
+    border: 0.5em solid rgb(100, 20, 0);
+    transform: rotate(75deg);
+  }
