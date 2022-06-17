@@ -2,7 +2,7 @@
 
 As the title states this is a test portfolio just using HTML CSS and Vanilla JS. 
 I wanted to use REACT but I wasn't comfortable with it so instead I punished myself 
-by replicating some gadgets through just using display flex to he best of my knowledge.
+by replicating some gadgets through just using display flex to the best of my abilities.
 
 
 Update 1: 
