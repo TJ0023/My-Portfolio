@@ -36,7 +36,7 @@ function load() {
 
         main.style.display = 'flex';
         setTimeout(() => (main.style.opacity = 1), 10);
-    }, 3500)
+    }, 2500)
 
 }
 
