@@ -2,13 +2,20 @@
     font-family: "SFPro";
     src: url(font/SFProLight.otf);
 }
+
+@font-face {
+  font-family: "Retro";
+  src: url(font/RetroGaming.ttf);
+}
+
+
 * {
     scroll-behavior: smooth;
 }
 
 a {
     text-decoration: none;
-}
+  }
 body {
     background-color: rgb(0, 0, 0);
     margin: 0;
@@ -21,13 +28,13 @@ body {
 /*Scroll Bar*/
 /* width */
 ::-webkit-scrollbar {
-    width: 0.3rem;
+    width: 0.7rem;
   }
 
   /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(255,158,0,1) 71%, rgba(202,131,255,1) 100%);
-    border-radius: 10px;
+  background:grey;
+  border-radius: 1em;
   }
   
 
@@ -65,7 +72,7 @@ body {
     to {transform: rotateY(360deg);}
 }
 
-  /*main container*/
+  /*main containers*/
 .bigContainer {
     width: 100%;
     height: 100%;
@@ -80,22 +87,40 @@ body {
     opacity: 1;
     display: flex;
     transition: opacity 0.5s ease-in;
+    flex-shrink: 0;
+}
+
+.bigContainer2 {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  overflow:scroll;
+  overflow-x: hidden;
+  opacity: 1;
+  display: flex;
+  transition: opacity 0.5s ease-in;
+  flex-shrink: 0;
+
 }
 
 /*iPhone Screen */
 .container1 {
-    background:no-repeat center / cover url(images/stackedPeak.svg);
+    background:no-repeat center / cover url(images/blob.svg);
     width: 100vw;
     height: 100vh;
     margin: 0;
     padding: 0;
-    display: inline-block;
+    display: flex;
     flex-shrink: 0;
 }
 
 .subcontainer1 {
     background-color: rgb(6, 1, 43);
-    max-width: 761px;
+    max-width: 762px;
     min-width: 323px;
     width: 95%;
     height: 95%;
@@ -144,8 +169,6 @@ body {
     width: 94%;
     height: 96%;
     border-radius: 3em;
-    display: flex;
-    flex-direction: column;
     overflow: auto;
     display: flex;
     flex-direction: row;
@@ -156,7 +179,7 @@ body {
 
 /* This is where the content for the phone should be! */
 .screen2 {
-    background-color: rgba(163, 59, 59, 0);
+    background-color: rgba(141, 25, 25, 0);
     max-width: 751px;
     min-width: 303px;
     width: 100%;
@@ -166,8 +189,12 @@ body {
     align-items: center;
     flex-shrink: 0;
     scroll-snap-align: center;
+    overflow: hidden;
 }
 
+.screen2 img {
+  transition: transform 0.3s ease-in-out;
+}
 
 #button1 {
     width: 35%;
@@ -228,8 +255,16 @@ body {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    margin-right: 2em;
+    margin-right: 1em;
     column-gap: 0.25em;
+  }
+
+  .iOSBarRight img:nth-child(1){
+    height: 0.9em;
+  }
+
+  .iOSBarRight img{
+    height: 1em
   }
 
   .iOSBar2 {
@@ -268,6 +303,7 @@ body {
     padding: 0.1em 0.2em 0.2em 0.2em;
     border-radius: 0.25em;
     font-size: 4vh;
+    cursor: pointer;
   }
 
   .keyArrow:hover {
@@ -275,9 +311,47 @@ body {
     color: rgb(255, 255, 255);
     padding: 0.1em 0.2em 0.2em 0.2em;
   }
-/*Spinning Clock*/
 
+  .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45%;
+    color: white;
+    margin-top: 1.5em;
 
+  }
+
+  .profile p, span, .nickNames {
+    font-size: 3vh;
+    font-weight: 700;
+  }
+
+  .nickNameContain {
+    background-color: rgba(133, 88, 143, 0.693);
+      border-radius: 1em;
+      padding: 0em 0.5em 0em 0.5em;
+      border: 0;
+  }
+
+  .picContain {
+    background-color: rgba(143, 88, 88, 0.354);
+    margin: 1em;
+    padding: 1em;
+    border-radius: 2em;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+  }
+
+  .picContain img {
+    min-width: 180px;
+    width: 100%;
+    height: 100%;
+    border-radius: 1em;
+  }
   .aboutMe {
     display: flex;
     flex-direction: column;
@@ -304,7 +378,7 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-content: space-around;
-    margin-top: 1em;
+    margin-top: 1em
   }
 
   .keyArrow2 {
@@ -312,17 +386,34 @@ body {
     color: white;
     width: 1em;
     height: 1em;
-    padding: 0.75em;
+    padding: 0.8em;
     border-radius: 50%;;
     font-size: 3vh;
     transition: ease-in 0.3s ;
     backdrop-filter: blur(15px);  
+    cursor: pointer;
+    text-align: center;
 }
 
   .keyArrow2:hover {
-    transform: scale(1.1);
-    background-color: rgb(59, 59, 59);
+    transform: scale(1.3);
+    background-color: rgb(22, 22, 22);
     color: white;
+  }
+
+  .keyArrow3 {
+    background-color: white;
+    color: black;
+    padding: 0.1em 0.2em 0.2em 0.2em;
+    border-radius: 0.25em;
+    font-size: 1.75vh;
+    cursor: pointer;
+  }
+
+  .keyArrow3:hover {
+    background-color: rgb(0, 176, 100);
+    color: rgb(255, 255, 255);
+    padding: 0.1em 0.2em 0.2em 0.2em;
   }
 /*iPhone Screen */
 
@@ -334,7 +425,7 @@ body {
 /*Gameboy Screen */
 
 .container2 {
-    background:no-repeat center / cover url(images/stackedPeak.svg);
+    background:no-repeat center / cover url(images/lowpoly3.svg);
     width: 100vw;
     height: 100vh;
     margin: 0;
@@ -342,15 +433,27 @@ body {
     display: flex;
     flex-direction: column;
 	align-items: center;
-	justify-content: center;
-    scroll-snap-align: center;
+	justify-content: flex-end;
+    scroll-snap-align: start;
     flex-shrink: 0;
+}
 
+.moreAboutMe {
+  width: 80%;
+  height: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Retro";
+  font-size: 3.75vh;
+  color:white;
+  text-shadow: 5px 5px rgb(2, 126, 99);
 }
 
 .subContainer2 {
     max-width: 740px;
-    min-width: 370px;
+    min-width: 400px;
     width: 70%; 
     height: 90%; 
     display: flex; 
@@ -360,8 +463,8 @@ body {
 }
 
 .gameboyScreen {
-    background-color: rgb(170, 38, 5);
-    width: 90%;
+  background: linear-gradient(254deg, rgba(221,0,0,1) 0%, rgba(166,0,0,1) 75%, rgba(165,0,0,1) 76%, rgba(143,0,0,1) 100%);
+  width: 90%;
     height: 60%;
     border-radius: 2em;
     border: 3px solid black;
@@ -402,37 +505,210 @@ body {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     color: white;
     font-weight: 700;
 }
 
 .gbaScreenMain {
-    padding: 0.2em;
-    margin: 0.75em;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(56, 56, 61);
     width: 90%;
-    height: 95%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    height: 85%;
+    justify-content: center;
     align-items: center;
     color: white;
     font-weight: 700;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    scroll-snap-type: x mandatory;
 }
 
-.gbaScreenMainText {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    color: white;
-    font-weight: 700;
-    font-size: 12em;
+.gbaScreenMain2 {
+  overflow: auto;
+  display: flex;
+  flex-direction: row;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+  height: 100%;
 }
+
+
+
+.gbaScreenMain2::-webkit-scrollbar { height: 0px;}
+
+
+.gbaScreenMainDisplay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+  background-image: url(images/screenWallpaper.svg);
+  color: white;
+  font-family: "Retro";
+  font-size: 2vh;
+  flex-shrink: 0;
+}
+
+.gbaScreenMainDisplay2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+  background-image: url(images/screenWallpaper.svg);
+  color: white;
+  font-family: "Retro";
+  font-size: 0.5vh;
+  flex-shrink: 0;
+}
+
+.gbaScreenMainDisplay3 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+  background-image: url(images/screenWallpaper.svg);
+  color: white;
+  font-family: "Retro";
+  font-size: 1.5vh;
+  flex-shrink: 0;
+}
+
+.gameGif {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+}
+.gameGifs {
+  border-radius: 0.5em;
+  transition: 0.2s ease;
+}
+
+.gameGifs:hover {
+  transform: scale(1.2);
+}
+.gameGifs:nth-child(1){
+  height: 150px;
+}
+
+.gameGifs:nth-child(2){
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  height: 150px;
+
+}
+
+.bBall {
+  border-radius: 1em;
+}
+/* Moving Logo */
+.boxLogo {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 95%;
+  width: 95%;
+  overflow: hidden;
+}
+
+.boxLogo .inner {
+	width: 95%;
+  min-width: 95%;
+  max-height: 300px;
+	min-height: 160px;
+	overflow: hidden;
+}
+
+.inner {
+  display:flex;
+  align-items: center;
+}
+.boxLogo .inner:first-child {
+	background-color: rgba(102, 169, 207, 0.616);
+  border-radius: 0.1em 0 0 0.1em;
+	color: darkred;
+	transform-origin: right;
+	transform: perspective(150px) rotateY(-15deg);
+}
+
+.boxLogo .inner:last-child {
+	background-color: rgba(26, 111, 207, 0.491);
+	color: antiquewhite;
+  border-radius: 0em 0.1em 0.1em 0em;
+	transform-origin: left;
+	transform: perspective(150px) rotateY(15deg);
+}
+
+.boxLogo .inner span {
+	position: relative;
+	animation: marquee 5s linear infinite;
+}
+
+.boxLogo .inner:first-child span {
+	animation-delay: 2.5s;
+	left: -100%;
+}
+
+.progLogo{
+  width: 100%;
+  max-height: 150px;
+  transition: 0.1s ease-in;
+}
+
+.progLogo:hover {
+  transform: scale(1.5);
+}
+
+@keyframes marquee {
+	from {
+		left: 100%;
+    transform: scale(1.1);
+	}
+
+	to {
+		left: -100%;
+    transform: scale(1.2);
+	}
+}
+
+/*Moving Logo*/
+.gbaScreenMainDisplay2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  background-image: url(images/stackedPeak.svg);
+  color: white;
+  font-family: "Retro";
+  font-size: 2vh;
+}
+
+
+
 
 .gameboyPad {
-    background-color: rgb(170, 38, 5);
+  background: linear-gradient(254deg, rgba(221,0,0,1) 0%, rgba(166,0,0,1) 75%, rgba(165,0,0,1) 76%, rgba(143,0,0,1) 100%);
     width: 90%;
     height: 60%;
     border-radius:  2em;
@@ -515,7 +791,7 @@ body {
     width: 2.75%;
     background-color: rgb(98, 226, 157);
     margin-bottom: 10px;
-    animation: blinking 0.5s infinite;
+    animation: blinking 1s infinite;
 }
 
 .greyLight {
@@ -544,7 +820,6 @@ body {
   .bigPadCircle,   .smallPadCircle {
     height: 100%;
     width: 50%;
-    outline: 2px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -552,18 +827,287 @@ body {
   }
 
   .bigPadCircle2 {
-    height: 85%;
-    width: 60%;
+    height: 82.5%;
+    width: 65%;
     background-color: rgb(136, 27, 0);
     border-radius: 50%;
     border: 0.5em solid rgb(100, 20, 0);
   }
 
   .smallPadCircle2 {
-    height: 100%;
+    height: 80%;
     width: 30%;
     border-radius: 4em;
     background-color: rgb(136, 27, 0);
     border: 0.5em solid rgb(100, 20, 0);
     transform: rotate(75deg);
+  }
+
+  /* Projects */
+
+  .projects {
+    background:no-repeat center / cover url(images/stacked.svg);
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+	  align-items: center;
+	  justify-content: center;
+    align-content: center;
+    scroll-snap-align: end;
+    flex-shrink: 0;
+    color: white;
+    font-size: 5vh;
+    gap: 3%;
+  }
+
+  .projectText {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5vh;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+  }
+
+  .projectDisplay {
+    background-color: rgba(88, 0, 114, 0.29);
+    width: 85%;
+    height: 85%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    scroll-snap-type: x mandatory;
+    border-radius: 0.25em;
+  }
+
+
+
+  .projectDisplay2 {
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    scroll-snap-type: both mandatory;
+    width: 100%;
+    height: 100%;
+  }
+
+  .projectDisplay2::-webkit-scrollbar { height: 0px; width:0px;}
+
+
+
+  .projectSubDisplay1,  .projectSubDisplay2, .projectSubDisplay3{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    scroll-snap-align: center;
+    background-image: no-repeat center / contain url(images/screenWallpaper.svg);
+    color: white;
+    font-family: "Retro";
+    font-size: 2vh;
+    flex-shrink: 0;
+  }
+
+  .projectPreview{
+    height: 90%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5em;
+    text-align: center;
+    gap: 10%;
+  }
+
+  .previewPic, .previewPic2, .previewPic3 {
+    min-height: 250px;
+    max-height: 800px;
+    width: 80%;
+    border-radius: 0.5em;
+    transform-origin: right;
+    transition: 0.3s ease-in-out;
+  }
+
+  .previewPic:hover, .previewPic2:hover, .previewPic3:hover{
+    transform: scale(1.1);
+  }
+
+  .previewPic {
+    transform: perspective(100px) rotateY(-2deg);
+  }
+
+  .previewPic2 {
+    transform: perspective(100px) rotateY(2deg);
+  }
+  
+
+  .contactMe {
+    background:no-repeat center / cover url(images/leafBlob2.svg);
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 2.5%;
+  }
+
+  .contactHeader{
+    font-size: 5vh;
+    font-weight: 700;
+    color: white;
+    background-color: hsla(0, 100%, 24%, 0.496);
+    padding: 1.25%;
+    width: 90%;
+    max-width: 550px;
+    text-align: center;
+    text-shadow: 5px 5px rgb(200, 15, 15);
+    border: 4px solid hsla(0, 67%, 47%, 0.819);
+    border-radius: 0.12em;
+  }
+
+  .emailForm {
+    max-width: 600px;
+    width: 90%;
+    height: 50%;
+    background-color: hsla(0, 100%, 24%, 0.496);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 auto;
+    color: white;
+    font-weight: 700;
+    text-align: left;
+    border-radius: 0.25em;
+    border: 4px solid hsla(0, 67%, 47%, 0.819);
+  }
+
+  label {
+    width: 95%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5em;
+    font-size: 2vh;
+  }
+  input[type='text'], input[type='email'], textarea{
+    width: 90%;
+    resize: none;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.7em;
+    border-radius: 0.25em;
+    border: 0;
+  }
+
+  input:focus, textarea {
+    outline: none;
+  }
+
+  input[type='file'] {
+    display:block;
+    margin-bottom: 1em;
+  }
+  input[type='submit'] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    padding: 0.75em;
+    background-color: #f6983b;
+    border: 0px;
+    color: white;
+    font-weight: 700;
+    font-size: 2vh;
+    cursor: pointer;
+  }
+
+  input[type='submit']:hover {
+    background-color: rgb(210, 62, 3);
+  }
+
+  .socials {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    align-items: center;
+    width: 90%;
+    max-width: 600px;
+    height: 15%;
+    font-weight: 700;
+    font-size: 2.5vh;
+    color: white;
+    background-color: hsla(0, 100%, 24%, 0.496);
+    border: 4px solid hsla(0, 67%, 47%, 0.819);
+    transition: 0.1s ease-in-out;
+    border-radius: 0.15em;
+  }
+
+  .socialsIcon:hover {
+  transform: scale(1.2);
+  }
+
+
+  @media screen and (max-width: 880px) {
+    .gameGifs:nth-child(1){
+      height: 90px;
+    }
+    
+    .gameGifs:nth-child(2){
+      height: 100px;
+    
+    }
+
+    .bBall {
+      height: 190px;
+    }
+  }
+
+  /*ipad landscape*/
+  @media only screen 
+  and (min-width: 1024px) 
+  and (max-height: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+
+    .projectDisplay2 {
+      gap: 5%
+    }
+
+    .previewPic, .previewPic2, .previewPic3 {
+      height: 700px;
+      width: 350px;
+    }
+
+    .previewPic {
+      transform: perspective(250px) rotateY(2deg);
+    }
+  
+    .previewPic2 {
+      transform: perspective(250px) rotateY(-2deg);
+    }
   }

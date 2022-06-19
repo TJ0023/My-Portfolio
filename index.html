@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TJ VG</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/spinIcon2.ico">
+    <link rel="stylesheet" href="style.css">  
 </head>
 <body>
    <!-- Loading Screen--> 
@@ -25,12 +26,12 @@
             </div>
             <div class="subcontainer1" id="divCenter">
                     <div class="screen1">
-                        <div class="screen2" id="slide1">
+                        <div class="screen2" id="homeScreen">
                                 <div class="notch">
                                     <div class="iOSBarRight">
-                                        <img src="images/signal.png" height="20px" alt="signal bar">
-                                        <img src="images/wifi.png" height="28px" alt="wifi bar">
-                                        <img src="images/battery.png" height="30px" alt="battery bar">
+                                        <img src="images/signal.png" alt="signal bar">
+                                        <img src="images/wifi.png" alt="wifi bar">
+                                        <img src="images/battery.png" alt="battery bar">
                                     </div>
                                 </div>
                                 <div class="clock">
@@ -39,37 +40,38 @@
                                 </div>
                                 <div class="greeting">
                                     <p>Hello</p>
-                                    <button class="swipe">Swipe / Press <a href="#slide2"><span class="keyArrow">→</span></a> to continue!</button>
+                                    <button class="swipe">Swipe Left / Press <span class="keyArrow" onclick="helloScreen()">→</span> to continue!</button>
                                     <!-- <p>Swipe / Press → to continue</p> -->
                                 </div>
                         </div>
-                        <div class="screen2" id="slide2">
+                        <div class="screen2" id="helloScreen">
                             <div class="notch">
                                 <div class="iOSBarRight">
                                     <div class="iOSBar2" style="justify-content: flex-start">
                                     <p id="time2"></p>
                                     </div>
                                     <div class="iOSBar2" style="justify-content: flex-end">
-                                        <img src="images/signal.png" height="20px" alt="signal bar">
-                                        <img src="images/wifi.png" height="28px" alt="wifi bar">
-                                        <img src="images/battery.png" height="30px" alt="battery bar">
+                                        <img src="images/signal.png"  alt="signal bar">
+                                        <img src="images/wifi.png" alt="wifi bar">
+                                        <img src="images/battery.png" alt="battery bar">
                                     </div>
                                 </div>
                             </div>
-                            <div class="clockSpin">
-                                <p style="font-size: 10vh;">🤔</p>
+                            <div class="profile">
+                                <div class="nickNameContain"><p>You can call me <span class="nickNames">...</span></p></div>
+                                <div class="picContain"><img src="images/profilePic.png" alt="TJ's Face"></div>
                             </div>
                             <div class="aboutMe">
                                 <div class="aboutMeText">
                                 <p>Hi, I'm Tristan Jay Gimenez and I'm <span id="display"></span> years old.</p>
-                                <p>I'm a full stack developer and I'm currently looking for work!</p>
+                                <p>I'm a full stack developer and I'm open for work!</p>
                                 </div>
                                 <div class="navArrows">
-                                    <p><a href="#slide1"><span class="keyArrow2">←</span></a></p>
-                                    <p><a href="#gameBoy"><span class="keyArrow2">&nbsp;↓&nbsp;</span></a></p>
+                                  <span class="keyArrow2" onclick="homeScreen()">←</span>
+                                <span class="keyArrow2" onclick="gbaScreen1()">&nbsp;↓&nbsp;</span>
                                 </div>
                             </div>
-                    </div>      
+                        </div>      
                     </div>
             </div>
             <div id="sideButton2"></div>
@@ -77,6 +79,7 @@
            
         <!-- GBA Screen -->
                 <div class="container2" >
+                    <div class="moreAboutMe"> <p>More About Me! </p></div>
                     <div class="subContainer2" id="gameBoy">
                             <div class="gameboyScreen">
                                 <div class="circles">
@@ -86,16 +89,50 @@
                                 </div>
                                     <div class="gbaScreen">
                                         <div class="gbaScreenMain">
-                                            <div style="width: 100%;height: 100%;">
-                                                <div class="gbaScreenMainText">
-                                                    <p style="font-size: 14px;">
-                                                    <span style="font-style:italic; font-size: 16px; margin: 0; padding: 0;">GAMING </span> 
-                                                    ADVANCE 
-                                                    <span style="font-weight: 100;"> SP </span>
-                                                    </p>
-                                            </div>
+                                            <div class="gbaScreenMain2">
+                                                <div class="gbaScreenMainDisplay" id="gbaScreen1">
+                                                    <p>I Code With... <span class="keyArrow3" onclick="gbaScreen2()">→</span></p>
+                                                    <div class="boxLogo">
+                                                        <div class="inner">
+                                                            <span><img src="images/HTML5.svg" class="progLogo"></span>
+                                                            <span><img src="images/CSS3.svg" class="progLogo"></span>
+                                                            <span><img src="images/JSLogo.svg" class="progLogo"></span>
+                                                            <span><img src="images/React.svg" class="progLogo"></span>
+                                                            <span><img src="images/NodeJS.svg" class="progLogo"></span>
+                                                            <span><img src="images/Github.svg" class="progLogo"></span>
+                                                            
+                                                        </div>
+                                                        <div class="inner">
+                                                          <span><img src="images/HTML5.svg" class="progLogo"></span>
+                                                          <span><img src="images/CSS3.svg" class="progLogo"></span>
+                                                          <span><img src="images/JSLogo.svg" class="progLogo"></span>
+                                                          <span><img src="images/React.svg" class="progLogo"></span>
+                                                          <span><img src="images/NodeJS.svg" class="progLogo"></span>
+                                                          <span><img src="images/Github.svg" class="progLogo"></span>
+
+
+
+
+                                                        </div>
+                                                      </div>
+                                                </div>
+
+                                                <div class="gbaScreenMainDisplay2" id="gbaScreen2">
+                                                    <p><span class="keyArrow3" onclick="gbaScreen1()">←</span> I love games! <span class="keyArrow3" onclick="gbaScreen3()">→</span></p>
+                                                    <div class="gameGif">
+                                                        <img src="images/Pokemon!.gif" alt="Pokemon Trainers!" class="gameGifs">
+                                                        <img src="images/Steve!.gif" alt="Minecraft Steve!" class="gameGifs">
+                                                    </div>
+                                                </div>
+
+                                                <div class="gbaScreenMainDisplay3" id="gbaScreen3">
+
+                                                    <div class="gameGif">
+                                                        <img src="images/Steph.gif" alt="Pokemon Trainers!" class="bBall">
+                                                    </div>
+                                                    <p><span class="keyArrow3" onclick="gbaScreen2()">←</span>&nbsp; and basketball too 🏀 &nbsp;<span class="keyArrow3" onclick="projects()">&nbsp;↓&nbsp;</span></p>
+                                                </div>
                                         </div>
-                               
                                 </div>
 
                                     </div>
@@ -134,9 +171,88 @@
                                 
                             </div>
                     </div>
-                 </div>
-        
 
+
+        <!-- Project Display-->
+
+        <div class="projects" id="projects">
+
+            <div class="projectText">
+                <p>MY PROJECTS!</p> 
+            </div>
+
+            <div class="projectDisplay">
+                <div class="projectDisplay2">
+
+                   <div class="projectSubDisplay1" id="Calculator">
+                    <p><span class="keyArrow3" onclick="gameBoy()">&nbsp;↑&nbsp;</span> Simple Calculator <span class="keyArrow3" onclick="MDSample()">&nbsp;↓&nbsp;</span> </p>
+                    <div class="projectPreview">
+                     <a  href="https://tj0023.github.io/SimpleCalculator/" target="_blank" rel="noopener noreferrer" style="text-align: center;"><img src="images/simpleCalculator.png" alt="A Simple Calculator" class="previewPic"></a>
+                     </div>
+                   </div>
+
+                   <div class="projectSubDisplay2" id="MDSample">
+                    <p> <span class="keyArrow3" onclick="Calculator()">&nbsp;↑&nbsp;</span> Clinical Care System <span class="keyArrow3" onclick="EMag()">&nbsp;↓&nbsp;</span> </p>
+                    <div class="projectPreview">
+                     <a  href="https://tj0023.github.io/MDSample/" target="_blank" rel="noopener noreferrer" style="text-align: center;"><img src="images/MDSample.png" alt="Clinical Care System Site" class="previewPic2"></a>
+                     </div>
+                   </div> 
+                   <div class="projectSubDisplay3" id="EMag">
+                    <p><span class="keyArrow3" onclick="MDSample()">&nbsp;↑&nbsp;</span> E-Magazine <span class="keyArrow3" onclick="contactArea()">&nbsp;↓&nbsp;</span> </p>
+                    <div class="projectPreview">
+                     <a  href="https://tj0023.github.io/Pokemon-E-Magazine/index.html" target="_blank" rel="noopener noreferrer" style="text-align: center;"><img src="images/Emag.png" alt="E-Magazine" class="previewPic3"></a>
+                     </div>
+                   </div>
+                   </div> 
+                </div>
+            </div>
+
+
+            <!--Contact Me -->
+
+            <div class="contactMe" id="contactArea">
+                <div class="contactHeader">Message Me!</div>
+
+                <div class="emailForm">
+                    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xeqnwjbj" method="POST">
+                          <label for="full-name">Full Name</label>
+                          <input type="text" name="name" id="full-name" placeholder="Your name." required="">
+                          <label for="email-address">Email Address</label>
+                          <input type="email" name="_replyto" id="email-address" placeholder="email@domain.com" required="">
+                          <label for="message">Message</label>
+                          <textarea rows="5" name="message" id="message" placeholder="Your message here." required=""></textarea>
+                          <label>Your File:<input type="file" name="upload"></label>
+                          <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                        <input type="submit" value="Submit">
+                      </form>
+                </div>
+
+                <div class="socials">
+                    <p>You Can Also See Me Here!</p>
+                    <div>
+                        <a  href="https://www.facebook.com/TwentyThreeTeiji/" target="_blank" rel="noopener noreferrer"><img src="images/facebook.svg" height="40px" alt="facebook icon"  class="socialsIcon"></a>
+                        <a  href="https://github.com/TJ0023" target="_blank" rel="noopener noreferrer"><img src="images/github.svg" height="40px" alt="github icon"  class="socialsIcon"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+  
     <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"> </script>
+    <script>
+        var typed = new Typed(".nickNames", {
+            strings: ["Jay", "TJ", "Tristan", "Dude 😎", "Bro 🤣",], 
+            smartBackspace: true,
+            startDelay: 3000,
+            typeSpeed: 30,
+            backSpeed: 30, 
+            backDelay: 2000,
+            showCursor: false,
+            loop: true,
+        })
+    </script>
 </body>
 </html>

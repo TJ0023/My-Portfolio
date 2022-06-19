@@ -56,4 +56,60 @@ setInterval(displayTime, 10);
  }
  setInterval(Age, 1);
 
+// anchor url hide by just using scroll into view I guess?
 
+function helloScreen() {
+   const element = document.getElementById("helloScreen");
+   element.scrollIntoView();
+ }
+
+ function homeScreen() {
+   const element = document.getElementById("homeScreen");
+   element.scrollIntoView();
+ }
+
+ 
+ function gameBoy() {
+   const element = document.getElementById("gameBoy");
+   element.scrollIntoView();
+ }
+
+ function gbaScreen1() {
+  const element = document.getElementById("gbaScreen1");
+  element.scrollIntoView(); 
+ }
+
+ function gbaScreen2() {
+  const element = document.getElementById("gbaScreen2");
+  element.scrollIntoView();
+}
+
+function gbaScreen3() {
+  const element = document.getElementById("gbaScreen3");
+  element.scrollIntoView();
+}
+
+function projects() {
+  const element = document.getElementById("projects");
+  element.scrollIntoView();
+}
+
+function Calculator() {
+  const element = document.getElementById("Calculator");
+  element.scrollIntoView();
+}
+
+function MDSample() {
+  const element = document.getElementById("MDSample");
+  element.scrollIntoView();
+}
+
+function EMag() {
+  const element = document.getElementById("EMag");
+  element.scrollIntoView();
+}
+
+function contactArea() {
+  const element = document.getElementById("contactArea");
+  element.scrollIntoView();
+}

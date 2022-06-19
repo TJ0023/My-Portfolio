@@ -88,22 +88,30 @@
 
     </style>
 </head>
-<body>
-    <div class="spinContainer">
+<body id="body">
+    <!-- <div class="spinContainer">
         <div class="square"> 
             <img src="images/spin.png" class="spin">
         </div>
-    </div>
-    <div class="container" id="con">
-        <div>
+    </div> -->
+    <div class="container" id="container">
+        <div id="age">
             <span id="display"></span>
         </div>
         <div>Child 2</div>
         <div>Child 3</div>
       </div>
-
+      <button id="slide" type="button" onclick="scrollBy()">Slide</button>
     
 <script>
+
+    const button = document.getElementById('slide').scroll;
+
+    function scrollBy() {
+        windows.scrollBy(100,0);
+    }
+
+
     // display age 
         function Age() {
             let today = new Date();
@@ -115,8 +123,6 @@
             let miliseconds = Math.floor(age);
 
             document.getElementById("display").textContent = `${year}.${miliseconds}`;
-            console.log(`${year}.${miliseconds}`);
-
          }
          setInterval(Age, 1);
             </script>
