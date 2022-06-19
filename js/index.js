@@ -25,22 +25,22 @@ setInterval(displayTime, 10);
 
 //loading screen
 
-// const loader = document.querySelector(".spinContainer");
-// const main = document.querySelector(".bigContainer");
+const loader = document.querySelector(".spinContainer");
+const main = document.querySelector(".bigContainer");
 
-// function load() {
-//     setTimeout(() => {
+function load() {
+    setTimeout(() => {
         
-//         loader.style.opacity = 0;  // sets opacity of loader to 0 and the rest is obvious
-//         loader.style.display = 'none';
+        loader.style.opacity = 0;  // sets opacity of loader to 0 and the rest is obvious
+        loader.style.display = 'none';
 
-//         main.style.display = 'flex';
-//         setTimeout(() => (main.style.opacity = 1), 10);
-//     }, 3500)
+        main.style.display = 'flex';
+        setTimeout(() => (main.style.opacity = 1), 10);
+    }, 3500)
 
-// }
+}
 
-// load ();
+load ();
 
  // display age 
  function Age() {
