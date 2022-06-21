@@ -43,18 +43,18 @@ function load() {
 load ();
 
  // display age 
- function Age() {
-    let today = new Date();
-    let birthday = new Date("2000-03-23");
-    let bday_val = birthday.getTime();
-    let age = today - bday_val;
+//  function Age() {
+//     let today = new Date();
+//     let birthday = new Date("2000-03-23");
+//     let bday_val = birthday.getTime();
+//     let age = today - bday_val;
 
-    let year = Math.floor(age / (1000 * 60 * 60 * 24 * 365.25));
-    let miliseconds = Math.floor(age);
+//     let year = Math.floor(age / (1000 * 60 * 60 * 24 * 365.25));
+//     let miliseconds = Math.floor(age);
 
-    document.getElementById("display").textContent = `${year}.${miliseconds}`;
- }
- setInterval(Age, 1);
+//     document.getElementById("display").textContent = `${year}.${miliseconds}`;
+//  }
+//  setInterval(Age, 1);
 
 // anchor url hide by just using scroll into view I guess?
 

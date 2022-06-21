@@ -256,4 +256,13 @@
         loop: true,
     })
 </script>
+<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+<script>
+    let ageEl = document.getElementById("display");
+
+    setInterval(() => {
+        let time = dayjs().diff(dayjs(953834400000), 'year', true);
+        ageEl.innerText = time.toString().substring(0, 12);
+    }, 50);
+</script>
 </html>
