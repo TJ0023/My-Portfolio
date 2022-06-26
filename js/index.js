@@ -113,3 +113,8 @@ function contactArea() {
   const element = document.getElementById("contactArea");
   element.scrollIntoView();
 }
+
+function sideWork() {
+  const element = document.getElementById("sideWork");
+  element.scrollIntoView();
+}

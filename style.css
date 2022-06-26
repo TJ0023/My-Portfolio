@@ -903,7 +903,7 @@ body {
 
 
 
-  .projectSubDisplay1,  .projectSubDisplay2, .projectSubDisplay3{
+  .projectSubDisplay1,  .projectSubDisplay2, .projectSubDisplay3, .projectSubDisplay4{
     width: 100%;
     height: 100%;
     display: flex;
@@ -934,6 +934,7 @@ body {
   .previewPic, .previewPic2, .previewPic3 {
     min-height: 250px;
     max-height: 800px;
+    max-width: 650px;
     width: 80%;
     border-radius: 0.5em;
     transform-origin: right;
