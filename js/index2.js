@@ -10,3 +10,7 @@ function navMenu() {
   }
 }
 
+function gbaScreen1b() {
+    const element = document.getElementById("gbaScreen1-b");
+    element.scrollIntoView(); 
+   }

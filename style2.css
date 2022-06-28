@@ -52,6 +52,46 @@
 .navMenu li:hover {
     background-size: 100% 5px;
 }
+
+.gbaScreenMainDisplaySkill {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    scroll-snap-align: center;
+    background-image: url(images/screenWallpaper.svg);
+    color: white;
+    font-family: "Retro";
+    font-size: 2vh;
+    flex-shrink: 0;
+  }
+
+
+  .progLogo2{
+    max-height: 80px;
+    transition: 0.1s ease-in;
+  }
+  
+  .progLogo2a{
+    width: 100%;
+    max-height: 100px;
+    transition: 0.1s ease-in;
+  }
+
+  .progLogo2b{
+    width: 200%;
+    height: 100px;
+    transition: 0.1s ease-in;
+    margin-left: -20px;
+  }
+
+  .progLogo2:hover, .progLogo2a:hover,  .progLogo2b:hover{
+    transform: scale(1.5);
+  }
 @media screen and (max-width: 900px) {
     .hamburger {
         width: 35px;
