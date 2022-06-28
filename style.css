@@ -944,15 +944,6 @@ body {
     transform: scale(1.1);
   }
 
-  .previewPic {
-    transform: perspective(100px) rotateY(-2deg);
-  }
-
-  .previewPic2 {
-    transform: perspective(100px) rotateY(2deg);
-  }
-  
-
   .contactMe {
     background:no-repeat center / cover url(images/leafBlob2.svg);
     width: 100vw;
