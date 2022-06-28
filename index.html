@@ -7,6 +7,7 @@
     <title>TJ VG</title>
     <link rel="icon" type="image/x-icon" href="images/spinIcon2.ico">
     <link rel="stylesheet" href="style.css">  
+    <link rel="stylesheet" href="style2.css">  
 </head>
 <body>
    <!-- Loading Screen--> 
@@ -16,6 +17,22 @@
         </div>
     </div>
 
+    <!-- navbar menu--> 
+    <div class="navBar" id="navBar" onClick="navMenu()">
+        <img src="./images/menu.svg" alt="Hamburger Menu Icon" class="hamburger">
+    </div>
+
+
+    <div class="navMenu">
+        <ul class="navList">
+            <li onClick="navMenu();  homeScreen();">Home</li>
+            <li onClick="navMenu(); gameBoy();">About Me</li>
+            <li onClick="navMenu(); projects();">Projects</li>
+            <li onClick="navMenu(); contactArea();">Message Me</li>
+            <li onClick="navMenu(); ">Resumé</li>
+        </ul>
+    </div>
+    <!-- main container-->
     <div class="bigContainer" >
     <!--iPhone Screen -->
         <div class="container1" id="divCenter" >
@@ -249,6 +266,7 @@
     </div>
 </body>
 <script src="js/index.js"></script>
+<script src="js/index2.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"> </script>
 <script>
     var typed = new Typed(".nickNames", {
