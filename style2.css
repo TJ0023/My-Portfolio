@@ -10,8 +10,8 @@
 }
 
 .navMenu {
-    width: 100vw;
-    height: 0vh;
+    width: 0vw;
+    height: 100vh;
     position: fixed;
     background-color: rgba(30, 62, 86, 0.9);
     display: flex;
@@ -21,7 +21,8 @@
     align-content: center;
     z-index: 3;
     transition: 0.2s ease-in-out;
-    left: -50%;
+    left: 0;
+    top: 0;
 }
 
 .navList {
@@ -33,6 +34,7 @@
     align-items: flex-end;
     align-content: center;
 }
+
 .navMenu li {
     list-style-type: none;
     cursor: pointer;

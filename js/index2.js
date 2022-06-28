@@ -1,11 +1,11 @@
 function navMenu() {
     let navMenu = document.querySelector('.navMenu');
     let navList = document.querySelector('.navList');
-    if( navMenu.style.height === "0vh") {
-    navMenu.style.height = '100vh';
+    if( navMenu.style.width === "0vw") {
+    navMenu.style.width = '50vw';
     navList.style.fontSize = '3vh';
   } else {
-    navMenu.style.height = '0vh';
+    navMenu.style.width = '0vw';
     navList.style.fontSize = '0vh';
   }
 }
