@@ -7,6 +7,7 @@
     margin: 1em;
     cursor: pointer;
     z-index: 4;
+    right: 0;
 }
 
 .navMenu {
@@ -21,7 +22,7 @@
     align-content: center;
     z-index: 3;
     transition: 0.2s ease-in-out;
-    left: 0;
+    right: 0;
     top: 0;
 }
 
@@ -68,6 +69,7 @@
     font-family: "Retro";
     font-size: 2vh;
     flex-shrink: 0;
+    position: relative
   }
 
 
@@ -92,6 +94,57 @@
   .progLogo2:hover, .progLogo2a:hover,  .progLogo2b:hover{
     transform: scale(1.5);
   }
+  .pageIndicator {
+    position:fixed; 
+    right:20px;
+    top: 40%;
+    z-index: 2;
+    opacity: 0;
+    display: none;
+    transition: 0.2s ease-in-out;
+  }
+  .pageIndicator li {
+    width: 0.9em;
+    height: 0.9em;
+    background: white;
+    border-radius: 50%;
+    list-style-type: none;
+    margin-top: 1em;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    /* border: 2px solid lightcoral; */
+    z-index: 2;
+  
+  }
+  .pageIndicator li:hover {
+    transform:scale(1.5);
+  }
+
+  .selected {
+    transform: scale(1.5);
+  }
+
+  .invisibleAnchor {
+    top: -50%;
+    width: 50px; 
+    height: 50px; 
+    background-color: white; 
+    border-radius: 50%; 
+    position:absolute; 
+    opacity:0;
+  }
+
+  .invisibleAnchor2 {
+    top: -12.5%;
+    width: 50px; 
+    height: 50px; 
+    background-color: white; 
+    border-radius: 50%; 
+    position:absolute; 
+    opacity:0;
+  }
+
+
 @media screen and (max-width: 900px) {
     .hamburger {
         width: 35px;

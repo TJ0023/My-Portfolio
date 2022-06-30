@@ -26,7 +26,12 @@ setInterval(displayTime, 10);
 //loading screen
 
 const loader = document.querySelector(".spinContainer");
-const main = document.querySelector(".bigContainer");
+const body1 = document.querySelector('body');
+const main = document.querySelector(".container1");
+const main2 = document.querySelector(".container2");
+const main3 = document.querySelector(".projects");
+const main4 = document.querySelector(".contactMe");
+const pageInd = document.querySelector(".pageIndicator");
 
 function load() {
     setTimeout(() => {
@@ -34,8 +39,17 @@ function load() {
         loader.style.opacity = 0;  // sets opacity of loader to 0 and the rest is obvious
         loader.style.display = 'none';
 
+        body1.style.overflowY ='auto';
         main.style.display = 'flex';
         setTimeout(() => (main.style.opacity = 1), 10);
+        main2.style.display = 'flex';
+        setTimeout(() => (main2.style.opacity = 1), 10);
+        main3.style.display = 'flex';
+        setTimeout(() => (main3.style.opacity = 1), 10);
+        main4.style.display = 'flex';
+        setTimeout(() => (main4.style.opacity = 1), 10);
+        pageInd.style.display = 'block';
+        setTimeout(() => (pageInd.style.opacity = 1), 10);
     }, 2500)
 
 }
@@ -68,7 +82,6 @@ function helloScreen() {
    element.scrollIntoView();
  }
 
- 
  function gameBoy() {
    const element = document.getElementById("gameBoy");
    element.scrollIntoView();
@@ -79,9 +92,15 @@ function helloScreen() {
   element.scrollIntoView(); 
  }
 
+ function gbaScreen1b() {
+  const element = document.getElementById("gbaScreen1b");
+  element.scrollIntoView(); 
+ }
+
  function gbaScreen2() {
   const element = document.getElementById("gbaScreen2");
   element.scrollIntoView();
+
 }
 
 function gbaScreen3() {
@@ -116,5 +135,15 @@ function contactArea() {
 
 function sideWork() {
   const element = document.getElementById("sideWork");
+  element.scrollIntoView();
+}
+ 
+ function divCenter() {
+  const element = document.getElementById("divCenter");
+  element.scrollIntoView();
+}
+
+function container2() {
+  const element = document.getElementById("container2");
   element.scrollIntoView();
 }

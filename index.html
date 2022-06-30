@@ -22,19 +22,27 @@
         <img src="./images/menu.svg" alt="Hamburger Menu Icon" class="hamburger">
     </div>
 
-
     <div class="navMenu">
         <ul class="navList">
-            <li onClick="navMenu();  homeScreen();">Home</li>
-            <li onClick="navMenu(); gameBoy();">About Me</li>
+            <li onClick="navMenu(); divCenter();">Home</li>
+            <li onClick="navMenu(); container2();">About Me</li>
             <li onClick="navMenu(); projects();">Projects</li>
             <li onClick="navMenu(); contactArea();">Message Me</li>
             <li onClick="navMenu(); ">Resumé</li>
         </ul>
     </div>
+
+    
+    <ul class="pageIndicator">
+        <li onclick="divCenter()"></li>
+        <li onclick="container2()"></li>
+        <li onclick="projects()"></li>
+        <li onclick="contactArea()"></li>
+    </ul>
+
     <!-- main container-->
-    <div class="bigContainer" >
     <!--iPhone Screen -->
+    <section>
         <div class="container1" id="divCenter" >
             <div id="sideButton">
                 <div id="notifButton"></div>
@@ -43,7 +51,8 @@
             </div>
             <div class="subcontainer1" id="divCenter">
                     <div class="screen1">
-                        <div class="screen2" id="homeScreen">
+                        <div class="screen2" style="position: relative">
+                            <div id="homeScreen" style="width: 50px; height: 50px; background-color: white; border-radius: 50%; top: -100px; position:absolute; opacity:0;"></div>
                                 <div class="notch">
                                     <div class="iOSBarRight">
                                         <img src="images/signal.png" alt="signal bar">
@@ -61,7 +70,8 @@
                                     <!-- <p>Swipe / Press → to continue</p> -->
                                 </div>
                         </div>
-                        <div class="screen2" id="helloScreen">
+                        <div class="screen2" style="position:relative">
+                            <div id="helloScreen" style="width: 50px; height: 50px; background-color: white; border-radius: 50%; top: -100px; position:absolute; opacity:0;"></div>
                             <div class="notch">
                                 <div class="iOSBarRight">
                                     <div class="iOSBar2" style="justify-content: flex-start">
@@ -88,7 +98,7 @@
 
                                 <div class="navArrows">
                                   <span class="keyArrow2" onclick="homeScreen()">←</span>
-                                <span class="keyArrow2" onclick="gbaScreen1()">&nbsp;↓&nbsp;</span>
+                                <span class="keyArrow2" onclick="container2()">&nbsp;↓&nbsp;</span>
                                 </div>
                             </div>
                         </div>      
@@ -96,9 +106,11 @@
             </div>
             <div id="sideButton2"></div>
         </div>
-           
-        <!-- GBA Screen -->
-                <div class="container2" >
+    </section>    
+
+    <!-- GBA Screen -->
+    <section>
+        <div class="container2" id="container2">
                     <div class="moreAboutMe"> <p>More About Me! </p></div>
                     <div class="subContainer2" id="gameBoy">
                             <div class="gameboyScreen">
@@ -110,7 +122,8 @@
                                     <div class="gbaScreen">
                                         <div class="gbaScreenMain">
                                             <div class="gbaScreenMain2">
-                                                <div class="gbaScreenMainDisplay" id="gbaScreen1">
+                                                <div class="gbaScreenMainDisplay">
+                                                    <div  id="gbaScreen1"  class="invisibleAnchor"></div>
                                                     <p>I Code With... <span class="keyArrow3" onclick="gbaScreen1b()">→</span></p>
                                                     <div class="boxLogo">
                                                         <div class="inner">
@@ -138,7 +151,8 @@
                                                         </div>
                                                       </div>
                                                 </div>
-                                                <div class="gbaScreenMainDisplaySkill" id="gbaScreen1-b">
+                                                <div class="gbaScreenMainDisplaySkill">
+                                                    <div id="gbaScreen1b" class="invisibleAnchor"></div>
                                                    <p> <span class="keyArrow3" onclick="gbaScreen1()">←</span> And these too! <span class="keyArrow3" onclick="gbaScreen2()">→</span></p>
                                                     <div class="boxLogo">
                                                         <div class="inner">
@@ -153,7 +167,8 @@
                                                         </div>
                                                       </div>
                                                 </div>
-                                                <div class="gbaScreenMainDisplay2" id="gbaScreen2">
+                                                <div class="gbaScreenMainDisplay2">
+                                                    <div id="gbaScreen2" class="invisibleAnchor"></div>
                                                     <p><span class="keyArrow3" onclick="gbaScreen1b()">←</span> I love games! <span class="keyArrow3" onclick="gbaScreen3()">→</span></p>
                                                     <div class="gameGif">
                                                         <img src="images/Pokemon!.gif" alt="Pokemon Trainers!" class="gameGifs">
@@ -161,8 +176,8 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="gbaScreenMainDisplay3" id="gbaScreen3">
-
+                                                <div class="gbaScreenMainDisplay3">
+                                                    <div id="gbaScreen3" class="invisibleAnchor"></div>
                                                     <div class="gameGif">
                                                         <img src="images/Steph.gif" alt="Pokemon Trainers!" class="bBall">
                                                     </div>
@@ -206,11 +221,11 @@
                             </div>
                                 
                             </div>
-                    </div>
+        </div>
+    </section> 
 
-
-        <!-- Project Display-->
-
+    <!-- Project Display-->
+    <section>
         <div class="projects" id="projects">
 
             <div class="projectText">
@@ -220,26 +235,30 @@
             <div class="projectDisplay">
                 <div class="projectDisplay2">
 
-                    <div class="projectSubDisplay4" id="sideWork">
+                    <div class="projectSubDisplay4">
+                        <div  id="sideWork"  class="invisibleAnchor2"></div>
                         <p><span class="keyArrow3" onclick="gameBoy()">&nbsp;↑&nbsp;</span> sideWork (React) <span class="keyArrow3" onclick="Calculator()">&nbsp;↓&nbsp;</span> </p>
                         <div class="projectPreview">
                          <a  href="http://zxtm89j1.github.io/sidework" target="_blank" rel="noopener noreferrer" style="text-align: center;"><img src="images/sideWork.png" alt="A Simple Calculator" class="previewPic3"></a>
                          </div>
                        </div>
-                   <div class="projectSubDisplay1" id="Calculator">
+                   <div class="projectSubDisplay1">
+                    <div  id="Calculator"  class="invisibleAnchor2"></div>
                     <p><span class="keyArrow3" onclick="sideWork()">&nbsp;↑&nbsp;</span> Simple Calculator <span class="keyArrow3" onclick="MDSample()">&nbsp;↓&nbsp;</span> </p>
                     <div class="projectPreview">
                      <a  href="https://tj0023.github.io/SimpleCalculator/" target="_blank" rel="noopener noreferrer" style="text-align: center;"><img src="images/simpleCalculator.png" alt="A Simple Calculator" class="previewPic"></a>
                      </div>
                    </div>
 
-                   <div class="projectSubDisplay2" id="MDSample">
+                   <div class="projectSubDisplay2">
+                    <div  id="MDSample"  class="invisibleAnchor2"></div>
                     <p> <span class="keyArrow3" onclick="Calculator()">&nbsp;↑&nbsp;</span> Clinical Care System <span class="keyArrow3" onclick="EMag()">&nbsp;↓&nbsp;</span> </p>
                     <div class="projectPreview">
                      <a  href="https://tj0023.github.io/MDSample/" target="_blank" rel="noopener noreferrer" style="text-align: center;"><img src="images/MDSample.png" alt="Clinical Care System Site" class="previewPic2"></a>
                      </div>
                    </div> 
-                   <div class="projectSubDisplay3" id="EMag">
+                   <div class="projectSubDisplay3">
+                    <div  id="EMag"  class="invisibleAnchor2"></div>
                     <p><span class="keyArrow3" onclick="MDSample()">&nbsp;↑&nbsp;</span> E-Magazine <span class="keyArrow3" onclick="contactArea()">&nbsp;↓&nbsp;</span> </p>
                     <div class="projectPreview">
                      <a  href="https://tj0023.github.io/Pokemon-E-Magazine/index.html" target="_blank" rel="noopener noreferrer" style="text-align: center;"><img src="images/EMagazine.png" alt="E-Magazine" class="previewPic3"></a>
@@ -247,12 +266,12 @@
                    </div>
                    </div> 
                 </div>
-            </div>
+        </div>
+    </section>
 
-
-            <!--Contact Me -->
-
-            <div class="contactMe" id="contactArea">
+    <!--Contact Me -->
+    <section>
+        <div class="contactMe" id="contactArea">
                 <div class="contactHeader">Message Me!</div>
 
                 <div class="emailForm">
@@ -276,10 +295,9 @@
                         <a  href="https://github.com/TJ0023" target="_blank" rel="noopener noreferrer"><img src="images/githubLogo.svg" height="40px" alt="github icon"  class="socialsIcon"></a>
                     </div>
                 </div>
-            </div>
         </div>
+    </section> 
 
-    </div>
 </body>
 <script src="js/index.js"></script>
 <script src="js/index2.js"></script>
