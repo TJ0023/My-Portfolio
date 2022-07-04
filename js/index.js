@@ -147,3 +147,8 @@ function container2() {
   const element = document.getElementById("container2");
   element.scrollIntoView();
 }
+
+function dotNetflix() {
+  const element = document.getElementById("dotNetflix");
+  element.scrollIntoView();
+}
