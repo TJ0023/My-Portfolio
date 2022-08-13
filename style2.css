@@ -144,7 +144,10 @@
     opacity:0;
   }
 
-
+ .downloadLink {
+  color: white;
+ }
+ 
 @media screen and (max-width: 900px) {
     .hamburger {
         width: 35px;
