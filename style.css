@@ -645,7 +645,7 @@ body {
   align-items: center;
 }
 .boxLogo .inner:first-child {
-	background-color: rgba(102, 169, 207, 0.616);
+	background-color: rgba(255, 197, 6, 0.853);
   border-radius: 0.1em 0 0 0.1em;
 	color: darkred;
 	transform-origin: right;
@@ -653,7 +653,7 @@ body {
 }
 
 .boxLogo .inner:last-child {
-	background-color: rgba(26, 111, 207, 0.491);
+	background-color: rgba(161, 124, 1, 0.853);
 	color: antiquewhite;
   border-radius: 0em 0.1em 0.1em 0em;
 	transform-origin: left;
